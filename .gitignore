@@ -1,3 +1,4 @@
+'EOF'
 # Secrets
 .env
 .env.*
@@ -20,3 +21,4 @@ venv/
 
 # Logs
 *.log
+EOF
