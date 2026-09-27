@@ -1,0 +1,22 @@
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*.secret
+
+# WireGuard private configuration
+*.conf
+!*.conf.example
+
+# FastAPI generated database
+clients.json
+clients.json.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+
+# Logs
+*.log

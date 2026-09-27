@@ -1,0 +1,25 @@
+[Interface]
+Address = 10.77.0.1/24
+ListenPort = 51820
+PrivateKey = <SERVER_PRIVATE_KEY>
+SaveConfig = false
+
+PostUp = sysctl -w net.ipv4.ip_forward=1
+PostUp = iptables -A FORWARD -i wg0 -j ACCEPT
+PostUp = iptables -A FORWARD -o wg0 -j ACCEPT
+PostDown = iptables -D FORWARD -i wg0 -j ACCEPT
+PostDown = iptables -D FORWARD -o wg0 -j ACCEPT
+
+
+
+
+
+
+
+# BEGIN CLIENT client-20260926-231625-471c
+[Peer]
+# Админ Arch
+# ID: client-20260926-231625-471c
+PublicKey = 9u63ok0x1i0HBZikG95cmIj5BJk3jWQ/52BK+DE/Tw4=
+AllowedIPs = 10.77.0.2/32
+# END CLIENT client-20260926-231625-471c
